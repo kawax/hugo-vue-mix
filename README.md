@@ -53,3 +53,6 @@ Vue コンポーネントを表示してるだけのサンプルテーマ。
 
 ## デプロイ前
 `npm run prod` でビルドしてコミット。
+
+## デモ
+http://hugo-vue-mix.netlify.com/
