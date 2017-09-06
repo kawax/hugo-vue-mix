@@ -51,6 +51,8 @@ Vue コンポーネントを表示してるだけのサンプルテーマ。
 ## 開発時
 `npm run server` で起動しつつ `npm run dev` でビルドする。`npm run watch` も一応使えるはず。
 
+普通に Vue.js 使うのと同じなので必要なら `vue-router` でも `vuex` でも追加して使える。
+
 ## デプロイ前
 `npm run prod` でビルドしてコミット。
 
