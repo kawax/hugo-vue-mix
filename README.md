@@ -55,7 +55,7 @@ Vue コンポーネントを表示してるだけのサンプルテーマ。
 `npm run prod` でビルドしてコミット。
 
 ## デモ
-http://hugo-vue-mix.netlify.com/
+https://hugo-vue-mix.netlify.com/
 
 ## Vue コンポーネント
 
