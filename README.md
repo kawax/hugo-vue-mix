@@ -56,3 +56,9 @@ Vue コンポーネントを表示してるだけのサンプルテーマ。
 
 ## デモ
 http://hugo-vue-mix.netlify.com/
+
+## Vue コンポーネント
+
+### filter-search
+絞り込み検索。とりあえず動くように作っただけなので実際に使う場合は `resources/assets/js/components/Search.vue` を元に書き換える。データソースは `resources/data/posts.json` サーバーがあるならAPIで取得するデータをjsonで直接置いている。
+

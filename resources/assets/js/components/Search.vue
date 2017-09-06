@@ -58,16 +58,22 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default" v-for="post in search()">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">{{ post.title }}</h3>
+                <div v-if="search.length">
+                    <div class="panel panel-default" v-for="post in search">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ post.title }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ post.content }}
+                        </div>
+                        <div class="panel-footer">{{ post.name }}</div>
                     </div>
-                    <div class="panel-body">
-                        {{ post.content }}
-                    </div>
-                    <div class="panel-footer">{{ post.name }}</div>
-
                 </div>
+
+                <div class="alert alert-danger" role="alert" v-else>
+                    Not Found
+                </div>
+
             </div>
         </div>
     </div>
@@ -86,7 +92,7 @@
                 },
             }
         },
-        methods: {
+        computed: {
             search() {
                 console.log(_.omitBy(this.filter, _.isEmpty));
 
