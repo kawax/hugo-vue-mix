@@ -1,27 +1,21 @@
-<!doctype html>
-<html lang="{{ $.Site.LanguageCode | default "en" }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ define "main" }}
 
-    <title>hugo-vue-mix</title>
+<filter-search></filter-search>
 
-    <link href="/css/app.css" rel="stylesheet">
+<example></example>
 
-</head>
-<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Contents</h2>
 
-<div id="app" class="container text-center">
-    <h1>hugo-vue-mix</h1>
-
-    <filter-search></filter-search>
-
-    <example></example>
+            <div class="list-group">
+                {{ range .Data.Pages }}
+                {{ .Render "li"}}
+                {{ end }}
+            </div>
+        </div>
+    </div>
 </div>
 
-
-<script src="/js/app.js"></script>
-
-</body>
-</html>
+{{ end }}

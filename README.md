@@ -26,7 +26,7 @@ Laravel の `resources` から assets 部分だけ。
 
 ### themes/sample
 Vue コンポーネントを表示してるだけのサンプルテーマ。
-他のテーマを使うには `themes/sample/layouts/index.html` を参考に Vue に必要な箇所を追加する。
+他のテーマを使うには `themes/sample/layouts/_default/baseof.html` を参考に Vue に必要な箇所を追加する。
 
 ```html
 <link href="/css/app.css" rel="stylesheet">
@@ -34,7 +34,7 @@ Vue コンポーネントを表示してるだけのサンプルテーマ。
 
 ```html
 <div id="app">
-    <example></example>
+    
 </div>
 ```
 
