@@ -1,6 +1,11 @@
-# Hugo + Vue.js + Laravel mix
+# Hugo + Vue.js + Laravel Mix
 
 Hugo + Vue.js のプロジェクトテンプレート
+
+## 目的
+hugo サイト内で少しだけ動的な部分を作りたい。
+
+WordPress で作ってるサイトを置き換えられるかどうか試し。
 
 ## 準備
 hugo コマンドは使える前提
@@ -46,7 +51,7 @@ Vue コンポーネントを表示してるだけのサンプルテーマ。
 `npm run prod` でビルドされたファイルはここに。デプロイ時に `hugo` だけで済むようにビルド済ファイルもgitリポジトリに含める。
 
 ## webpack.mix.js
-ファイルの出力先を `static` に変更している。`mix()` ヘルパーが使えないので `version()` は使えない。
+ファイルの出力先を `static` に変更している。`mix()` ヘルパーが使えないので `version()` は使えない。正確には旧バージョンの Mix と違ってファイル名は変わらないので `version()` 使っても使わなくても同じ。
 
 ## 開発時
 `npm run server` で起動しつつ `npm run dev` でビルドする。`npm run watch` も一応使えるはず。

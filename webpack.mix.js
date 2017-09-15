@@ -11,13 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.options({
-    publicPath: 'static',
-});
-
+mix.setPublicPath('static');
 
 mix.js('resources/assets/js/app.js', 'static/js')
    .sass('resources/assets/sass/app.scss', 'static/css');
-
-
-// Can't use .version()
