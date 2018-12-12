@@ -1,72 +1,72 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <div class="row justify-content-center">
+            <div class="col-8">
                 <h2>Filter Search</h2>
 
                 <div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.title" value="">
+                            <input class="form-check-input" type="radio" v-model="filter.title" value="">
                             all
                         </label>
                     </div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.title" value="title 1">
+                            <input class="form-check-input" type="radio" v-model="filter.title" value="title 1">
                             title 1
                         </label>
                     </div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.title" value="title 2">
+                            <input class="form-check-input" type="radio" v-model="filter.title" value="title 2">
                             title 2
                         </label>
                     </div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.title" value="title 3">
+                            <input class="form-check-input" type="radio" v-model="filter.title" value="title 3">
                             title 3
                         </label>
                     </div>
                 </div>
 
                 <div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.name" value="">
+                            <input class="form-check-input" type="radio" v-model="filter.name" value="">
                             all
                         </label>
                     </div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.name" value="name 1">
+                            <input class="form-check-input" type="radio" v-model="filter.name" value="name 1">
                             name 1
                         </label>
                     </div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.name" value="name 2">
+                            <input class="form-check-input" type="radio" v-model="filter.name" value="name 2">
                             name 2
                         </label>
                     </div>
-                    <div class="radio-inline">
+                    <div class="form-check form-check-inline">
                         <label>
-                            <input type="radio" v-model="filter.name" value="name 3">
+                            <input class="form-check-input" type="radio" v-model="filter.name" value="name 3">
                             name 3
                         </label>
                     </div>
                 </div>
 
                 <div v-if="search.length">
-                    <div class="panel panel-default" v-for="post in search">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{ post.title }}</h3>
+                    <div class="card m-2" v-for="post in search">
+                        <div class="card-header">
+                            <h3>{{ post.title }}</h3>
                         </div>
-                        <div class="panel-body">
+                        <div class="card-body">
                             {{ post.content }}
                         </div>
-                        <div class="panel-footer">{{ post.name }}</div>
+                        <div class="card-footer">{{ post.name }}</div>
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@
     export default {
         data() {
             return {
-                posts: require('../../../data/posts.json'),
+                posts: require('../../data/posts.json'),
                 filter: {
                     title: "",
                     name: "",

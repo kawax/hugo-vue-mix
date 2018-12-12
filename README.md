@@ -15,8 +15,8 @@ hugo コマンドは使える前提
 ```bash
 git clone https://github.com/kawax/hugo-vue-mix.git my-site
 cd ./my-site
-yarn install
-yarn prod
+npm i
+npm run prod
 hugo server
 ```
 
@@ -27,7 +27,7 @@ http://localhost:1313/
 基本的には hugo デフォルトのまま。
 
 ### resources
-Laravel の `resources` から assets 部分だけ。
+Laravel の `resources` から js/sass 部分だけ。
 
 ### themes/sample
 Vue コンポーネントを表示してるだけのサンプルテーマ。
@@ -48,18 +48,18 @@ Vue コンポーネントを表示してるだけのサンプルテーマ。
 ```
 
 ### static
-`yarn prod` でビルドされたファイルはここに。デプロイ時に `hugo` だけで済むようにビルド済ファイルもgitリポジトリに含める。
+`npm run prod` でビルドされたファイルはここに。デプロイ時に `hugo` だけで済むようにビルド済ファイルもgitリポジトリに含める。
 
 ## webpack.mix.js
 ファイルの出力先を `static` に変更している。`mix()` ヘルパーが使えないので `version()` は使えない。正確には旧バージョンの Mix と違ってファイル名は変わらないので `version()` 使っても使わなくても同じ。
 
 ## 開発時
-`yarn server` で起動しつつ `yarn dev` でビルドする。`yarn watch` も一応使えるはず。
+`npm run server` で起動しつつ `npm run dev` でビルドする。`npm run watch` も一応使えるはず。
 
 普通に Vue.js 使うのと同じなので必要なら `vue-router` でも `vuex` でも追加して使える。
 
 ## デプロイ前
-`yarn prod` でビルドしてコミット。
+`npm run prod` でビルドしてコミット。
 
 ## デモ
 https://hugo-vue-mix.netlify.com/
@@ -67,5 +67,5 @@ https://hugo-vue-mix.netlify.com/
 ## Vue コンポーネント
 
 ### filter-search
-絞り込み検索。とりあえず動くように作っただけなので実際に使う場合は `resources/assets/js/components/FilterSearch.vue` を元に書き換える。データソースは `resources/data/posts.json` サーバーがあるならAPIで取得するデータをjsonで直接置いている。
+絞り込み検索。とりあえず動くように作っただけなので実際に使う場合は `resources/js/components/FilterSearch.vue` を元に書き換える。データソースは `resources/data/posts.json` サーバーがあるならAPIで取得するデータをjsonで直接置いている。
 
